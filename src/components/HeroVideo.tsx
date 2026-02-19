@@ -68,7 +68,7 @@ const HeroVideo: React.FC<Props> = ({
             position: "relative",
             zIndex: 2,
             px: { xs: "6%", md: "8%", lg: "10%", xl: "12%" },
-            pt: { xs: "120px", md: "160px" }, // مساحة للهيدر
+            pt: { xs: "120px", md: "160px" },
             pb: { xs: "60px", md: "100px" },
             display: "flex",
             alignItems: "flex-end",
@@ -99,7 +99,7 @@ const HeroVideo: React.FC<Props> = ({
             </Typography>
 
             <Button
-              href="#contact"
+              href="contact"
               variant="contained"
               sx={{
                 mt: 3,

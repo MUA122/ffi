@@ -17,8 +17,8 @@ type BoardMember = {
 };
 
 export default function CompanySection() {
-  const heroBg = "/assets/company_her.jpg";
-  const aboutImg = "/assets/company_hero.jpg";
+  const heroBg = "/assets/com2_ai.png";
+  const aboutImg = "/assets/company_ai.png";
 
   const values: ValueCard[] = [
     {
@@ -60,6 +60,11 @@ export default function CompanySection() {
     { src: "/assets/par2.png", alt: "Partner 2" },
     { src: "/assets/par3.png", alt: "Partner 3" },
     { src: "/assets/par4.png", alt: "Partner 4" },
+    { src: "/assets/par5.png", alt: "Partner 5" },
+    { src: "/assets/par6.png", alt: "Partner 6" },
+    { src: "/assets/par7.png", alt: "Partner 7" },
+    { src: "/assets/par8.png", alt: "Partner 8" },
+    { src: "/assets/par9.png", alt: "Partner 9" },
   ];
 
   return (
@@ -457,7 +462,7 @@ export default function CompanySection() {
           ))}
         </Box>
       </SectionWrap>
-      <OurPartnersMarquee partners={partners} speedSeconds={10} />
+      <OurPartnersMarquee partners={partners} speedSeconds={15} />
       <Divider
         sx={{
           height: 3,

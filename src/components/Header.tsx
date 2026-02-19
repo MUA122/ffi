@@ -18,29 +18,26 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-// ── Brand Colors ──────────────────────────────────────────────────────────────
+// Brand Colors
 const ORANGE = "#E8651A";
 const GRAY = "#8A8A8A";
 
-// ✅ Router Links بدل الـ hash
 const navLinks = [
   { label: "Company", to: "/company" },
   { label: "Services", to: "/services" },
   { label: "Projects", to: "/projects" },
   { label: "Vendors", to: "/vendors" },
-  { label: "Gallery", to: "/gallery" },
+  // { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
 ];
 
-// ── Languages ─────────────────────────────────────────────────────────────────
+// Languages
 const languages = [
   { code: "en", label: "English", flag: "/assets/en_icon.png" },
   { code: "ar", label: "Arabic", flag: "/assets/su_icon.png" },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Language Switcher
-// ─────────────────────────────────────────────────────────────────────────────
 const LanguageSwitcher: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
@@ -58,7 +55,6 @@ const LanguageSwitcher: React.FC = () => {
 
   return (
     <Box ref={ref} sx={{ position: "relative", flexShrink: 0 }}>
-      {/* Trigger */}
       <Box
         onClick={() => setOpen((p) => !p)}
         sx={{
@@ -233,9 +229,8 @@ const LanguageSwitcher: React.FC = () => {
   );
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Logo (go home)
-// ─────────────────────────────────────────────────────────────────────────────
+
 const Logo: React.FC = () => (
   <Box
     component={Link}
@@ -295,9 +290,7 @@ const Logo: React.FC = () => (
   </Box>
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Nav Link (Router)
-// ─────────────────────────────────────────────────────────────────────────────
+// Nav Link
 const NavLink: React.FC<{
   label: string;
   to: string;
@@ -340,9 +333,6 @@ const NavLink: React.FC<{
   </Box>
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CTA Button (example: route to contact)
-// ─────────────────────────────────────────────────────────────────────────────
 const CTAButton: React.FC<{
   fullWidth?: boolean;
   compact?: boolean;
@@ -384,9 +374,7 @@ const CTAButton: React.FC<{
   </Button>
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Mobile Drawer (Router links)
-// ─────────────────────────────────────────────────────────────────────────────
+// Mobile Drawer
 const MobileDrawer: React.FC<{ open: boolean; onClose: () => void }> = ({
   open,
   onClose,
@@ -515,14 +503,11 @@ const MobileDrawer: React.FC<{ open: boolean; onClose: () => void }> = ({
   </Drawer>
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
 // MAIN HEADER
-// ─────────────────────────────────────────────────────────────────────────────
 const FFIHeader: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const scrolled = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
 
-  // ✅ active based on current route
   const { pathname } = useLocation();
   const active = (to: string) =>
     to === "/"
@@ -618,7 +603,6 @@ const FFIHeader: React.FC = () => {
             }}
           >
             <LanguageSwitcher />
-            {/* ✅ CTA يودّي contact */}
             <Box component={Link} to="/contact" sx={{ textDecoration: "none" }}>
               <CTAButton compact />
             </Box>
@@ -679,7 +663,6 @@ const FFIHeader: React.FC = () => {
         </Box>
       </Box>
 
-      {/* spacer */}
       <Box sx={{ height: { xs: "88px", sm: "96px", md: "108px" } }} />
 
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />

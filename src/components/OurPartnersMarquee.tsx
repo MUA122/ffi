@@ -132,7 +132,7 @@ function PartnerItem({ partner }: { partner: Partner }) {
       src={partner.src}
       alt={partner.alt}
       sx={{
-        height: { xs: 85, sm: 95, md: 105 },
+        height: { xs: 85, sm: 95, md: 130 },
         width: "auto",
         maxWidth: { xs: 450, md: 550 },
         opacity: 0.92,
