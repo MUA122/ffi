@@ -22,6 +22,7 @@ export default function VendorsPage({
     { src: "/assets/par2.png", alt: "Partner 2" },
     { src: "/assets/par3.png", alt: "Partner 3" },
     { src: "/assets/par4.png", alt: "Partner 4" },
+    { src: "/assets/par5.png", alt: "Partner 5" },
     { src: "/assets/par6.png", alt: "Partner 6" },
     { src: "/assets/par7.png", alt: "Partner 7" },
     { src: "/assets/par8.png", alt: "Partner 8" },
